@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+
+    <!-- Create a header with H1 tag -->
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <!-- Create a main tag with section classes -->
+
+    <main>
+        <section class="search">
+            <!-- TODO: Create div for sub-sections (search-box) -->
+            <h2>Search for a City</h2>
+            <form>
+                <!-- TODO: Create div for sub-sections (search-form) -->
+                <input type="text" placeholder="City Name">
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <section class="current">
+            <!-- TODO: Create id and class property:values for sub-sections-->
+            <h2>Current Weather</h2>
+            <div class="card">
+                <h3>City Name</h3>
+                <p>Current Date</p>
+                <img src="http://openweathermap.org/img/wn/04d.png" alt="weather icon">
+                <p>Temperature: 75 F</p>
+                <p>Humidity: 50%</p>
+                <p>Wind Speed: 10 MPH</p>
+                <p>UV Index: <span>2</span></p>
+            </div>
+        </section>
+
+        <section class="forecast">
+            <!-- TODO: Create id and class property:values for sub-sections-->
+            <h2>5-Day Forecast</h2>
+            <div class="card">
+                <h3>City Name</h3>
+                <p>Current Date</p>
+                <img src="http://openweathermap.org/img/wn/04d.png" alt="weather icon">
+                <p>Temperature: 75 F</p>
+                <p>Humidity: 50%</p>
+            </div>
+        </section>
+    </main>
+
+</body>
+<!-- TODO: Add scrips to grab jquery and ajax api codes -->
+<script src="./assets/js/script.js"></script>
+
+</html>
