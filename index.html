@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./assets/css/dist/output.css">
     <title>Weather Dashboard</title>
 </head>
@@ -15,9 +18,9 @@
     <header>
         <section class="justify-content-center bg-blue text-white mx-0 px-1">
             <div class="flex flex-wrap">
-                <div class="w-full sm:w-full pr-4 pl-4 md:w-full pr-4 pl-4">
-                    <h1 class="text-4xl text-center w-full text-blue-500">W<span class="text-black">eather</span> V<span
-                            class="text-black">ane</span></h1>
+                <div class="w-full sm:w-full pr-4 pl-4 md:w-full">
+                    <h1 class="text-4xl text-center w-full text-blue-500 bg-green-200">W<span
+                            class="text-black">eather</span> V<span class="text-black">ane</span></h1>
                 </div>
             </div>
         </section>
@@ -26,41 +29,28 @@
     <!-- Main Container Section -->
 
     <main>
-        <section class="container mx-auto sm:px-4 max-w-full mx-auto sm:px-4">
+        <section class="container mx-auto sm:px-4 max-w-full">
             <!-- Input Card Row -->
-            <div class="row">
-
-                <div class="columns-5 bg-grey border-spacing-1">
-
-                    <div class="searchBox row mx-5">
-                        <h3>Search City:</h3>
+            <div class="flex flex-wrap">
+                <div class="w-1/4 bg-gray-300 border-1">
+                    <div class="searchBox flex flex-wrap mx-3">
+                        <h3>Enter City Name:</h3>
                     </div>
-
-                    <div class="searchInput row ml-5">
-
+                    <div class="searchInput flex flex-wrap ml-3">
                         <input class="border" type="text" id="searchCity">
-
-                        <button type="button" class="btn btnMain btn-md border-0" id="btnSearch">
-                            <span class="oi oi-magnifying-glass"></span>
-
-                        </button>
+                        <button tye="button"
+                            class="inline-block align-middle text-center select-none border font-normal whitespace-nowrap rounded py-1 px-3 leading-normal no-underline bg-green-500 text-white hover:bg-green-500 btn-md"
+                            id="btnSearch"> <i class="fa-solid fa-magnifying-glass"></i> Search</button>
 
                     </div>
 
-                    <div class="list-group row m-5" id="pastCities"></div>
-                    <div class="col-9">
-
-                        <div class="row border m-3" id="searchCity"></div>
-                        <div class="row m-3" id="resultsCity"></div>
-
-
+                    <div class="flex flex-wrap pl-0 mb-0 border rounded border-gray-300 m-6" id="pastCities"></div>
+                    <div class="w-3/4">
+                        <div class="flex flex-wrap border m-6" id="searchCity"></div>
+                        <div class="flex flex-wrap m-6" id="resultsCity"></div>
                     </div>
-
                 </div>
-
             </div>
-
-
         </section>
 
 
