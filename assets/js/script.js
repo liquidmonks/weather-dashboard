@@ -39,4 +39,19 @@ btn.addEventListener("click", search);
 // TODO: Function to grab data from local storage and display it in the past city list
 /*                                                                                                   */
 /*                                                                                                   */
+
+// Function to retrieve the current weather for the city the user entered from the OpenWeather API
+
+let apiFetch = function (city) {
+  // Build the URL to fetch the current weather for the city the user entered
+
+  //  Condition to check if url is http or https protocol
+  let url;
+  if (location.protocol === "http:") {
+    url = "http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=b49f09d83751bac497ac0bcca783dc04";
+  } else {
+    url = "https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=b49f09d83751bac497ac0bcca783dc04";
+  }
+};
+
 /*****************************************************************************************************/
