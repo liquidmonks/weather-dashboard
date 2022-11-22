@@ -26,6 +26,8 @@ btn.addEventListener("click", search);
 
 // TODO: Container to hold and parse the city name and date from local storage
 
+let dataStorage = JSON.parse(localStorage.getItem("cities")) || [];
+
 /******************************************* Functions ***********************************************/
 /*                                                                                                   */
 // TODO: Function to get the current weather for the city the user entered
