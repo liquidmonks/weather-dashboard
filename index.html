@@ -11,29 +11,56 @@
 
 <body>
 
-    <!-- Create a header with H1 tag -->
+    <!-- Header Section -->
     <header>
-        <div class="justify-content-center bg-inherit font-bold text-sky-500 mx px-1">
-            <div class="row">
-                <div class="colo-12 col-sm-12 col-md-12">
-                    <h1 class="text-center text-2xl text-blue-500">W<span class="text-black">eather</span> V<span
+        <section class="justify-content-center bg-blue text-white mx-0 px-1">
+            <div class="flex flex-wrap">
+                <div class="w-full sm:w-full pr-4 pl-4 md:w-full pr-4 pl-4">
+                    <h1 class="text-4xl text-center w-full text-blue-500">W<span class="text-black">eather</span> V<span
                             class="text-black">ane</span></h1>
                 </div>
             </div>
-        </div>
+        </section>
     </header>
 
-    <!-- Create a main tag with section classes -->
+    <!-- Main Container Section -->
 
     <main>
-        <section class="search text-blue-300">
-            <!-- TODO: Create div for sub-sections (search-box) -->
-            <h2 class="text-blue-500 bg-slate-400">Search for a City</h2>
-            <form>
-                <!-- TODO: Create div for sub-sections (search-form) -->
-                <input type="text" placeholder="City Name">
-                <button type="submit">Search</button>
-            </form>
+        <section class="container mx-auto sm:px-4 max-w-full mx-auto sm:px-4">
+            <!-- Input Card Row -->
+            <div class="row">
+
+                <div class="columns-5 bg-grey border-spacing-1">
+
+                    <div class="searchBox row mx-5">
+                        <h3>Search City:</h3>
+                    </div>
+
+                    <div class="searchInput row ml-5">
+
+                        <input class="border" type="text" id="searchCity">
+
+                        <button type="button" class="btn btnMain btn-md border-0" id="btnSearch">
+                            <span class="oi oi-magnifying-glass"></span>
+
+                        </button>
+
+                    </div>
+
+                    <div class="list-group row m-5" id="pastCities"></div>
+                    <div class="col-9">
+
+                        <div class="row border m-3" id="searchCity"></div>
+                        <div class="row m-3" id="resultsCity"></div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
         </section>
 
 
