@@ -206,3 +206,8 @@ function loadCity() {
 function toCelsius(temp) {
   return (((temp - 32) * 5) / 9).toFixed(2);
 }
+
+// Function to convert mph to kph
+function toKph(speed) {
+  return (1.609 * speed).toFixed(2);
+}
