@@ -9,14 +9,17 @@ let pastCity = $("#pastCity");
 // Grab the #searchCity input field to get the value of the city the user entered
 let searchCity = $("#searchCity");
 
+/*****************************************************************************************************/
+
 /*********** Execute Functions **********/
 /*                                      */
-
 function init() {
   loadCity();
 }
 /*                                      */
 /****************************************/
+
+/********************************LocalStorage Evaluation Code Block******************************************/
 
 // Function to load the city name and date from local storage
 let dataStorage = JSON.parse(localStorage.getItem("cities")) || [];
@@ -41,7 +44,7 @@ let saveCity = function (city) {
 };
 // console.log(dataStorage);
 
-/******************************************* Functions ***********************************************/
+/******************************************* Openweathermap.org API Call Functions ***********************************************/
 
 // Function to retrieve the current weather for the city the user entered from the OpenWeather API
 
@@ -86,7 +89,7 @@ async function getForecast(city) {
   }
 }
 
-/*****************************************************************************************************/
+/**********************************Function Code Block To Display Search Results********************************************/
 
 // Function to show data from API
 function showData(data) {
@@ -158,7 +161,7 @@ function showData(data) {
   $("#show").html(show);
 }
 
-/*****************************************************************************************************/
+/************************************Listener Click Function To Grab User City Search Input****************************************/
 
 // Initialize the function to get the current weather for the city the user entered
 
@@ -168,9 +171,7 @@ btn.click(function () {
   // console.log(city);
 });
 
-// Function to grab data from local storage and display it in the past city list
-/*                                                                                                   */
-/*                                                                                                   */
+/*********************************Function to grab data from local storage and display it in the past city list*****************************************/
 
 function loadCity() {
   // Clear everything in Past Cities Field
@@ -181,7 +182,7 @@ function loadCity() {
   }
 }
 
-/****************************************Utility Functions *******************************************/
+/****************************************Utility Functions To Convert Data Units*******************************************/
 
 // Function to convert Fahrenheit to Celsius
 function toCelsius(temp) {

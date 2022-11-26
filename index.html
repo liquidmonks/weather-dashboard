@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fontawesome Reference link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css"
         integrity="sha512-3M00D/rn8n+2ZVXBO9Hib0GKNpkm8MSUU/e2VNthDyBYxKWG+BftNYYcuEjXlyrSO637tidzMBXfE7sQm0INUg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <!-- Tailwindcss CDN Reference link -->
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Weather Vane</title>
 </head>
@@ -16,22 +18,24 @@
 <body>
 
     <!-- Header Section -->
+
     <header>
         <section class="px-10 py-3 mx-0 text-white bg-green-200 justify-content-center">
             <h1 class="w-full text-4xl text-center text-blue-500">W<span class="text-black">eather</span> V<span
                     class="text-black">ane</span></h1>
         </section>
     </header>
-    <!-- Main Container Section -->
 
     <!-- Main Container Section -->
 
     <main>
+
+        <!-- City Input Search Card-->
         <section class="container max-w-full mx-auto">
-            <!-- Input Card Row -->
             <div class="flex flex-wrap justify-between">
                 <div class="w-full pb-5 bg-gray-300 sm:w-full md:w-1/4 border-1">
                     <div class="searchBox">
+                        <!-- Input search box -->
                         <h3 class="my-3 text-2xl text-center">Enter City Name:</h3>
                     </div>
                     <div class="flex flex-wrap justify-between px-4 searchInput">
@@ -43,6 +47,7 @@
                     <div class="py-3 border"></div>
                     <div class="px-4 py-5 pastCity">
                         <ul id="pastCity">
+                            <!-- City search results populates within the list elements -->
                             <li></li>
                         </ul>
                     </div>
@@ -50,6 +55,7 @@
                 <div class="w-full p-4 sm:w-full md:w-3/4">
                     <div id="msg" class="mb-4"></div>
                     <div id="show">
+                        <!-- Card to display city search results -->
                         <h2>Enter a City Name to get its Forecast...</h2>
                     </div>
                 </div>
@@ -58,10 +64,13 @@
     </main>
 
 </body>
+
 <!-- Scrips to grab jquery and ajax api codes -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
     integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<!-- Script.js reference link -->
 <script src="./assets/js/script.js"></script>
 
 </html>
