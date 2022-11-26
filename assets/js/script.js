@@ -223,3 +223,9 @@ function utcToDate(timeStamp) {
 
 // Initialize the page
 init();
+
+// Click on a past city will get all its details.
+$("#pastCity li").click(function () {
+  let city = $(this).html();
+  getForecast(city);
+});
