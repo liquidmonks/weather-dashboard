@@ -74,6 +74,9 @@ async function getForecast(city) {
 
   // Calling API using fetch() method to get CITY coordinates
   const response = await fetch(cityUrl);
+
+  // Saving the API response in a JSON object.
+  let cityData = await response.json();
 }
 
 /*****************************************************************************************************/
