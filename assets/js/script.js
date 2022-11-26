@@ -178,7 +178,7 @@ function loadCity() {
   $("#pastCity").html("");
   // Show all past cities from local storage
   for (let i = 0; i < dataStorage.length; i++) {
-    $("#pastCity").append('<li class="p-3 hover:bg-gray-200 cursor-pointer">' + dataStorage[i] + "</li>");
+    $("#pastCity").append('<li class="p-3 hover:bg-gray-200 cursor-pointer" onclick="citiesClick(this.innerHTML)">' + dataStorage[i] + "</li>");
   }
 }
 
@@ -207,7 +207,6 @@ function utcToDate(timeStamp) {
 init();
 
 // Click on a past city will get all its details.
-$("#pastCity li").click(function () {
-  let city = $(this).html();
+function citiesClick(city) {
   getForecast(city);
-});
+}
