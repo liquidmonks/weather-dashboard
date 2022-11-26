@@ -218,3 +218,8 @@ function utcToDate(timeStamp) {
   d.setUTCSeconds(timeStamp);
   return d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
 }
+
+/****************************************Initial Page Load Behavior*******************************************/
+
+// Initialize the page
+init();
