@@ -1,0 +1,9 @@
+.pastCities ul li{
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid #f6f6f6;
+    cursor: pointer;
+}
+.pastCities ul li:hover{
+    background-color: #bbf7d0;
+}
