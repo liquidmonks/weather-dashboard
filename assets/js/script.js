@@ -42,18 +42,6 @@ let saveCity = function (city) {
 // console.log(dataStorage);
 
 /******************************************* Functions ***********************************************/
-/*                                                                                                   */
-// TODO: Function to get the current weather for the city the user entered
-/*                                                                                                   */
-/*                                                                                                   */
-/*                                                                                                   */
-// TODO: Initialize the function to get the current weather for the city the user entered
-/*                                                                                                   */
-/*                                                                                                   */
-/*                                                                                                   */
-// TODO: Function to grab data from local storage and display it in the past city list
-/*                                                                                                   */
-/*                                                                                                   */
 
 // Function to retrieve the current weather for the city the user entered from the OpenWeather API
 
