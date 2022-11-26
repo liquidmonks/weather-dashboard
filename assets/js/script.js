@@ -64,6 +64,15 @@ let saveCity = function (city) {
 
 // Function to retrieve the current weather for the city the user entered from the OpenWeather API
 
+async function getForecast(city) {
+  let cityUrl;
+  if (location.protocol === "http:") {
+    cityUrl = "http://api.openweathermap.org/geo/1.0/direct?q=" + city + "&appid=b49f09d83751bac497ac0bcca783dc04";
+  } else {
+    cityUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&appid=b49f09d83751bac497ac0bcca783dc04";
+  }
+}
+
 let apiFetch = function (city) {
   // Build the URL to fetch the current weather for the city the user entered
 
