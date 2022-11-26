@@ -53,10 +53,10 @@ async function getForecast(city) {
     cityUrl = "https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&appid=b49f09d83751bac497ac0bcca783dc04";
   }
 
-  // Calling API using fetch() method to get CITY coordinates
+  // Calls API using fetch() method to get CITY coordinates
   const response = await fetch(cityUrl);
 
-  // Saving the API response in a JSON object.
+  // Saves the API response in a JSON object.
   let cityData = await response.json();
 
   // If city doesn't exist show an error message
@@ -197,7 +197,7 @@ function toKph(speed) {
 function utcToDate(timeStamp) {
   let d = new Date(0); // The 0 there is the key, which sets the date to the epoch
   d.setUTCSeconds(timeStamp);
-  return d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
+  return d.getMonth() + "/" + d.getDate() + "/" + d.getFullYear();
 }
 
 /****************************************Initial Page Load Behavior*******************************************/
