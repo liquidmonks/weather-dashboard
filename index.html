@@ -16,48 +16,51 @@
 
     <!-- Header Section -->
     <header>
-        <section class="justify-content-center text-white mx-0 px-10">
-            <div class="flex flex-wrap">
-                <div class="w-full">
-                    <h1 class="text-4xl text-center w-full text-blue-500 bg-green-200">W<span
-                            class="text-black">eather</span> V<span class="text-black">ane</span></h1>
-                </div>
-            </div>
+        <section class="px-10 py-3 mx-0 text-white bg-green-200 justify-content-center">
+
+            <h1 class="w-full text-4xl text-center text-blue-500">W<span class="text-black">eather</span> V<span
+                    class="text-black">ane</span></h1>
         </section>
     </header>
 
     <!-- Main Container Section -->
 
     <main>
-        <section class="container mx-auto sm:px-4 max-w-full">
+        <section class="container max-w-full mx-auto">
             <!-- Input Card Row -->
-            <div class="flex flex-wrap">
-                <div class="w-1/4 bg-gray-300 border-1">
-                    <div class="searchBox flex flex-wrap mx-3">
-                        <h3 class="text-2xl">Enter City Name:</h3>
+            <div class="flex flex-wrap justify-between">
+                <div class="w-full pb-5 bg-gray-300 sm:w-full md:w-1/4 border-1">
+                    <div class="searchBox">
+                        <h3 class="my-3 text-2xl text-center">Enter City Name:</h3>
                     </div>
-                    <div class="searchInput flex flex-wrap ml-3">
-                        <input class="border" type="text" id="searchCity">
+                    <div class="flex flex-wrap justify-between px-4 searchInput">
+                        <input class="w-3/4 px-2 border" type="text" id="searchCity">
                         <button tye="button"
-                            class="inline-block align-middle text-center select-none border font-normal whitespace-nowrap rounded py-1 px-3 leading-normal no-underline bg-green-500 text-white hover:bg-green-500 btn-md"
-                            id="btnSearch"> <i class="fa-solid fa-magnifying-glass"></i> Search</button>
-
+                            class="w-1/4 px-3 py-1 font-normal leading-normal text-center text-white no-underline bg-green-500 border rounded select-none whitespace-nowrap hover:bg-green-500 btn-md"
+                            id="btnSearch"> <i class="fas fa-search"></i></button>
                     </div>
-
-                    <div class="flex flex-wrap pl-0 mb-0 border rounded border-gray-300 m-6" id="pastCity"></div>
-                    <div class="w-3/4">
-                        <div class="flex flex-wrap border m-6" id="currentCity"></div>
-                        <div class="flex flex-wrap m-6" id="forecastCity"></div>
+                    <div class="py-3 border"></div>
+                    <div class="px-4 py-5 pastCity">
+                        <ul id="pastCity">
+                            <li></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="w-full p-4 sm:w-full md:w-3/4">
+                    <div id="msg" class="mb-4"></div>
+                    <div id="show">
+                        <h2>Enter a City Name to get its Forecast...</h2>
                     </div>
                 </div>
             </div>
         </section>
-
-
     </main>
 
 </body>
-<!-- TODO: Add scrips to grab jquery and ajax api codes -->
+<!-- Scrips to grab jquery and ajax api codes -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="./assets/js/script.js"></script>
 
 </html>
