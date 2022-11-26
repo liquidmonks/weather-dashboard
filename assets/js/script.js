@@ -18,9 +18,10 @@ let forecastCity = document.querySelector("#forecastCity");
 /*                                      */
 init();
 /*                                      */
-// Listen for click event on #btnSearch
 /*                                      */
-btn.addEventListener("click", search);
+function init() {
+  loadCity();
+}
 /*                                      */
 /****************************************/
 
