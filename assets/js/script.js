@@ -106,3 +106,75 @@ async function getForecast(city) {
 }
 
 /*****************************************************************************************************/
+
+// Function to show data from API
+function showData(data) {
+  // Saves current day's data into variables.
+  let cityName = data.city.name;
+  let today = data.list[0];
+  let timeStamp = today.dt;
+
+  // let todayDate = dt.getDate() + '/'+ dt.getMonth() + '/'+ dt.getFullYear();
+  let d = new Date(0); // 0 key sets the date to the epoch
+  d.setUTCSeconds(timeStamp);
+  let todayDate = utcToDate(today.dt);
+  let todayIcon = today.weather[0].icon;
+  let todayTemp = today.main.temp;
+  let todayHumidity = today.main.temp;
+  let todayWind = today.wind.speed;
+  let len = Object.keys(data.list).length;
+
+  let show = "";
+
+  // Combines all data from the API into a string.
+  show += `<div class="border p-3 mb-5">
+  <h1 class="text-3xl font-bold">${cityName}</h1>
+  <h4 class="text-md text-gray-500"><img src="https://openweathermap.org/img/wn/${todayIcon}.png"></h4>
+  <h2 class="text-xl text-black-500 font-semibold">${todayDate}</h2>
+  <p>Temperature: ${todayTemp} °F / ${toCelsius(todayTemp)} °C</p>
+  <p>Humidity: ${todayHumidity}% </p>
+  <p> Wind Speed: ${todayWind} MPH / ${toKph(todayWind)} KPH</p>
+</div>`;
+
+  show += `<div class="fiveDay">
+  <h1 class="text-3xl font-semibold mb-4">5 Day Forecast</h1>
+  <div class="flex flex-wrap justify-between">`;
+
+  show += `<div class="block lg:w-1/4 mb-2 md:w-4/12 sm:w-1/2 p-6 bg-white border border-gray-200 rounded-lg shadow-md bg-blue-500 hover:bg-blue-400">
+  <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${todayDate}</h5>
+  <img src="https://openweathermap.org/img/wn/${todayIcon}.png" alt="Icon">
+  <p class="text-md font-normal text-white">Temp: ${todayTemp} °F / ${toCelsius(todayTemp)} °C</p>
+  <p class="text-md font-normal text-white">Humidity: ${todayHumidity}%</p>
+</div>`;
+
+  let lastDate = todayDate;
+  let day, dayDate, dayTemp, dayHumidity, dayIcon;
+  let j = 0;
+  // Gets the data for next five days and combining it to show.
+  for (let i = 1; i <= len; i += 5) {
+    day = data.list[i];
+    if (day != undefined) {
+      dayDate = utcToDate(day.dt);
+      if (dayDate != lastDate && j < 4) {
+        // console.log(day.dt_txt);
+        dayTemp = day.main.temp;
+        dayHumidity = day.main.humidity;
+        dayIcon = day.weather[0].icon;
+        show += `<div class="block lg:w-1/4 mb-2 md:w-4/12 sm:w-1/2 p-6 bg-white border border-gray-200 rounded-lg shadow-md bg-blue-500 hover:bg-blue-400">
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${dayDate}</h5>
+              <img src="https://openweathermap.org/img/wn/${dayIcon}.png" alt="Icon">
+              <p class="text-md font-normal text-white">Temp: ${dayTemp} °F / ${toCelsius(dayTemp)} °C</p>
+              <p class="text-md font-normal text-white">Humidity: ${dayHumidity}%</p>
+          </div>`;
+        lastDate = dayDate;
+        j += 1;
+      }
+    }
+  }
+  show += `</div>
+          </div>`;
+  // Shows all data on page.
+  $("#show").html(show);
+}
+
+/*****************************************************************************************************/
