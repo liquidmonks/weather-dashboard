@@ -201,3 +201,8 @@ function loadCity() {
 }
 
 /****************************************Utility Functions *******************************************/
+
+// Function to convert Fahrenheit to Celsius
+function toCelsius(temp) {
+  return (((temp - 32) * 5) / 9).toFixed(2);
+}
