@@ -77,6 +77,13 @@ async function getForecast(city) {
 
   // Saving the API response in a JSON object.
   let cityData = await response.json();
+
+  // If city doesn't exist show an error message
+  if (cityData.length == 0) {
+    $("#show").html(`<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+      <strong class="font-bold">NO City Found!</strong>
+    </div>`);
+  }
 }
 
 /*****************************************************************************************************/
