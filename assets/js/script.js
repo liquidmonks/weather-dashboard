@@ -211,3 +211,10 @@ function toCelsius(temp) {
 function toKph(speed) {
   return (1.609 * speed).toFixed(2);
 }
+
+// Function to convert timestamp to date
+function utcToDate(timeStamp) {
+  let d = new Date(0); // The 0 there is the key, which sets the date to the epoch
+  d.setUTCSeconds(timeStamp);
+  return d.getDate() + "/" + d.getMonth() + "/" + d.getFullYear();
+}
