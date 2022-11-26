@@ -25,9 +25,28 @@ function init() {
 /*                                      */
 /****************************************/
 
-// TODO: Container to hold and parse the city name and date from local storage
-
+// Function to load the city name and date from local storage
 let dataStorage = JSON.parse(localStorage.getItem("cities")) || [];
+
+// Function to save a searched city in local storage.
+let saveCity = function (city) {
+  let flag = false;
+  if (dataStorage) {
+    // Check if a city is already present in local storage
+    for (let i = 0; i < dataStorage.length; i++) {
+      if (dataStorage[i] === city) {
+        flag = true;
+      }
+    }
+  }
+  if (!flag) {
+    dataStorage.push(city);
+    localStorage.setItem("cities", JSON.stringify(dataStorage));
+  }
+  // Load cities again.
+  loadCity();
+};
+// console.log(dataStorage);
 
 /******************************************* Functions ***********************************************/
 /*                                                                                                   */
