@@ -178,3 +178,26 @@ function showData(data) {
 }
 
 /*****************************************************************************************************/
+
+// Initialize the function to get the current weather for the city the user entered
+
+btn.click(function () {
+  let city = searchCity.val();
+  getForecast(city);
+  // console.log(city);
+});
+
+// Function to grab data from local storage and display it in the past city list
+/*                                                                                                   */
+/*                                                                                                   */
+
+function loadCity() {
+  // Clear everything in Past Cities Field
+  $("#pastCity").html("");
+  // Show all past cities from local storage
+  for (let i = 0; i < dataStorage.length; i++) {
+    $("#pastCity").append('<li class="p-3 hover:bg-gray-200 cursor-pointer">' + dataStorage[i] + "</li>");
+  }
+}
+
+/****************************************Utility Functions *******************************************/
