@@ -83,6 +83,25 @@ async function getForecast(city) {
     $("#show").html(`<div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
       <strong class="font-bold">NO City Found!</strong>
     </div>`);
+  } else {
+    // If exist then save city in past cities
+    saveCity(city);
+    // Coordinates of a city
+    let long = cityData[0].lon;
+    let lat = cityData[0].lat;
+    let weatherUrl;
+    if (location.protocol === "http:") {
+      weatherUrl = `http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&units=imperial&appid=b49f09d83751bac497ac0bcca783dc04`;
+    } else {
+      weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&units=imperial&appid=b49f09d83751bac497ac0bcca783dc04`;
+    }
+    // Calling API for weather forecast of the city
+    const response2 = await fetch(weatherUrl);
+
+    // Saving the api response data in JSON object.
+    let data = await response2.json();
+    // Sending data to showData() function to show data on screen.
+    showData(data);
   }
 }
 
