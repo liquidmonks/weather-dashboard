@@ -111,7 +111,7 @@ function showData(data) {
   let show = "";
 
   // Combines all data from the API into a string.
-  show += `<div class="border p-3 mb-5">
+  show += `<div class="border border-zinc-900 p-3 mb-5">
   <h1 class="text-3xl font-bold">${cityName}</h1>
   <h4 class="text-md text-gray-500"><img src="https://openweathermap.org/img/wn/${todayIcon}.png"></h4>
   <h2 class="text-xl text-black-500 font-semibold">${todayDate}</h2>
@@ -124,7 +124,7 @@ function showData(data) {
   <h1 class="text-3xl font-semibold mb-4">5 Day Forecast</h1>
   <div class="flex flex-wrap justify-between">`;
 
-  show += `<div class="block lg:w-1/4 mb-2 md:w-4/12 sm:w-1/2 p-6 bg-white border border-gray-200 rounded-lg shadow-md bg-blue-500 hover:bg-blue-400">
+  show += `<div class="block lg:w-1/4 mb-2 md:w-4/12 sm:w-1/2 p-6 bg-white border border-zinc-900 rounded-lg shadow-md bg-blue-500 hover:bg-blue-400">
   <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${todayDate}</h5>
   <img src="https://openweathermap.org/img/wn/${todayIcon}.png" alt="Icon">
   <p class="text-md font-normal text-white">Temp: ${todayTemp} °F / ${toCelsius(todayTemp)} °C</p>
@@ -144,7 +144,7 @@ function showData(data) {
         dayTemp = day.main.temp;
         dayHumidity = day.main.humidity;
         dayIcon = day.weather[0].icon;
-        show += `<div class="block lg:w-1/4 mb-2 md:w-4/12 sm:w-1/2 p-6 bg-white border border-gray-200 rounded-lg shadow-md bg-blue-500 hover:bg-blue-400">
+        show += `<div class="block lg:w-1/4 mb-2 md:w-4/12 sm:w-1/2 p-6 border border-zinc-900 rounded-lg shadow-md bg-blue-500 hover:bg-blue-400">
               <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">${dayDate}</h5>
               <img src="https://openweathermap.org/img/wn/${dayIcon}.png" alt="Icon">
               <p class="text-md font-normal text-white">Temp: ${dayTemp} °F / ${toCelsius(dayTemp)} °C</p>

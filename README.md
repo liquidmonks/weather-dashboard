@@ -25,7 +25,7 @@ The program uses third-party APIs to allow a traveler to search upcoming weather
 
 ## Screenshots
 
-![App Screenshot](https://github.com/liquidmonks/passwordgenerator/blob/main/assets/images/weathervane.jpg)
+![App Screenshot](https://github.com/liquidmonks/passwordgenerator/blob/main/assets/images/weathervane.gif)
 
 
 ## 🔗 Live Site Link
