@@ -38,7 +38,6 @@ The program uses third-party APIs to allow a traveler to search upcoming weather
 - TailwindCSS
 - JavaScript
 - jQuery
-- Moment.JavaScript
 - Bootstrap
 - Font Awesome
 - Google Fonts
