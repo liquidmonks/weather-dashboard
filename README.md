@@ -28,8 +28,8 @@ The program uses third-party APIs to allow a traveler to search upcoming weather
 ![App Screenshot](https://github.com/liquidmonks/weather-dashboard/blob/main/assets/image/weathervane.gif)
 
 
-## 🔗 Live Site Link
-[![Live Site](https://img.shields.io/badge/livesite-click-orange)](https://https://liquidmonks.github.io/weather-dashboard//)
+## 🔗 Click to Launch Live Site Link
+[![Live Site](https://img.shields.io/badge/livesite-click-orange)](https://liquidmonks.github.io/weather-dashboard/)
 
 ## Tech Stack
 
